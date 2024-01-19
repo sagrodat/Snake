@@ -1,0 +1,52 @@
+﻿  Board.cpp
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.cpp(14,54): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.cpp(14,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.cpp(15,68): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.cpp(15,50): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+  Drawing.cpp
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,19): error C2011: "SFMLObjects'': "class" wpisz ponownie definicję
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): error C2079: "sfmlObjects" używa niezdefiniowanego class "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): error C2371: "sfmlObjects": zmiana definicji; różne typy podstawowe
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): message : zobacz deklarację „sfmlObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.hpp(11,19): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Board.hpp(12,20): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Drawing.cpp(6,2): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Drawing.cpp(11,4): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\Drawing.cpp(14,2): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+  Game.cpp
+  main.cpp
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,19): error C2011: "SFMLObjects'': "class" wpisz ponownie definicję
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): error C2079: "sfmlObjects" używa niezdefiniowanego class "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): error C2371: "sfmlObjects": zmiana definicji; różne typy podstawowe
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(15,20): message : zobacz deklarację „sfmlObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\main.cpp(6,12): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\main.cpp(9,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\main.cpp(12,17): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "SFMLObjects"
+E:\INFORMATYKA\PROGRAMOWANIE\PROJEKTY\W trakcie\GraphVisualization\GraphVisualization\SFMLObjects.hpp(2,7): message : zobacz deklarację „SFMLObjects”
+  SFMLObjects.cpp
+  Generowanie kodu...
