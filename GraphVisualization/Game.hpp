@@ -4,6 +4,9 @@
 #include "Board.hpp"
 #include "Snake.hpp"
 #include "Fruits.hpp"
+#include "Button.hpp"
+#include "Drawing.hpp"
+#include "Assets.hpp"
 
 class Game
 {
@@ -15,7 +18,6 @@ private : // game variables
 	sf::Time frameInterval = sf::seconds(startFrameDuration);
 
 	int score = 0;
-	int bestScore = -1;
 
 	bool started = false;
 
@@ -54,12 +56,36 @@ public : // initiated in header
 		sf::Keyboard::Down
 	};
 
+
+private :
+
+
 public : // game classes
 	Board board;
 	Snake snake;
 	Fruits fruits;
 
+	struct {
+		Button startNewGameButton{ assets.getStartNewGameButton().position, assets.getStartNewGameButton().path };
+	}Buttons;
+
+private : // functional buttons
+	
+	
+
+public : //endGameScreen
+	struct {
+		sf::Color color = sf::Color(0, 0, 255);
+		sf::Vector2f position = sf::Vector2f(200,200);
+		sf::Vector2f size = sf::Vector2f(400, 400);
+	}endGameBackground;
+	
+	
+
 public :
+	void setupButtons();
+
+	int getScore();
 	void startGame();
 	void endGame();
 	bool hasStarted();
@@ -72,6 +98,8 @@ public :
 	float calculateNewFrameDuration();
 	bool fruitGeneratedInsideSnake();
 
+	void resetGame();
+
 
 };
-inline Game game;
+inline Game * game;

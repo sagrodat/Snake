@@ -38,6 +38,7 @@ private :
 
 	void generateAndSetHeadStartingPosition();
 
+
 public :
 	void moveSnake();
 	sf::Vector2f getHeadPosition();
@@ -48,6 +49,7 @@ public :
 	bool isPositionIllegal();
 	int getSnakeHeadID();
 	void increaseLength();
+	bool willTurnBackwards(int newDir);
 	void countMove();
 	long long getMoveNumber();
 	int getReversedDirection(int dir);

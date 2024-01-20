@@ -2,8 +2,9 @@
 
 Game::Game()
 {
-	
 }
+
+
 
 bool Game::hasStarted() { return started; }
 void Game::startGame() { started = true; }
@@ -23,8 +24,8 @@ void Game::setFrameInterval(sf::Time interval) { frameInterval = interval; }
 
 void Game::endGame()
 {
-	game.setFrameInterval(sf::seconds(INT_MAX)); // pause for INT_MAX seconds
 	std::cout << "Game lost!" << std::endl;
+	drawEndGameScreen();
 	/* 
 	* TO DO 
 	* Draw on the screen :
@@ -33,6 +34,8 @@ void Game::endGame()
 	* 
 	*/
 }
+
+int Game::getScore() { return score; }
 
 bool Game::snakeCapturedFruit()
 {

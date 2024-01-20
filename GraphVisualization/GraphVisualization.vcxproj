@@ -135,19 +135,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Assets.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Drawing.cpp" />
     <ClCompile Include="Fruits.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SFMLObjects.cpp" />
     <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assets.hpp" />
     <ClInclude Include="Board.hpp" />
+    <ClInclude Include="Button.hpp" />
     <ClInclude Include="Drawing.hpp" />
     <ClInclude Include="Fruits.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="SFMLObjects.hpp" />
     <ClInclude Include="Snake.hpp" />
   </ItemGroup>

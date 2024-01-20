@@ -105,6 +105,13 @@ void Snake::setHeadPosition(sf::Vector2f vec)
 	snakeElements->at(SNAKE_HEAD_ID).setPosition(vec);
 }
 
+bool Snake::willTurnBackwards(int newDirection)
+{
+	if (newDirection == getReversedDirection(currentDirection))
+		return true;
+	return false;
+}
+
 std::vector<sf::RectangleShape>* Snake::getSnakeElements() { return snakeElements; }
 
 void Snake::setDirection(int direction) { this->currentDirection = direction;}
