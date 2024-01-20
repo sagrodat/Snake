@@ -1,7 +1,7 @@
 #include "SFMLObjects.hpp"
 SFMLObjects::SFMLObjects()
 {
-	window = new sf::RenderWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Snake game", sf::Style::Titlebar | sf::Style::Close);
+	window = new sf::RenderWindow(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Snake game");//, sf::Style::Titlebar | sf::Style::Close);
 	clock = new sf::Clock;
 }
 

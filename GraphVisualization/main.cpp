@@ -32,14 +32,33 @@ int main()
                 game.snake.setDirection(Snake::DOWN);
 
             // move snake 
-
             if (sfmlObjects.getClock()->getElapsedTime() > game.getFrameInterval())
             {
                 game.snake.moveSnake();
 
+                // check if snake ate the fruit
+                if (game.snakeCapturedFruit())
+                {
+                    game.snake.increaseLength();
+                    game.increaseScore();
+                    game.increaseSpeed();
+
+                    //generate fruit until it's in a legal position
+                    //cant be generated inside snake ( low chance )
+                    do {
+                        game.fruits.generateFruit();
+                    } while (game.fruitGeneratedInsideSnake());
+                }
+                   
+                // check for end of game
+                if (game.snake.isPositionIllegal())
+                    game.endGame();
+
                 //reset clock
                 sfmlObjects.getClock()->restart();
             }
+            
+
          
         }
 

@@ -15,13 +15,12 @@ public :
 		RIGHT = 2,
 		DOWN = 3
 	};
-
 	
-
 private :
 	int SNAKE_HEAD_ID = 0;
 
-	const int startingTotalLength = 10;
+	const int startingTotalLength = 3;
+	const int minDistanceFromEdge = startingTotalLength;
 	int length;
 	int direction = -1;
 
@@ -43,4 +42,9 @@ public :
 	std::vector<sf::RectangleShape>* getSnakeElements();
 	void setDirection(int direction);
 	int getDirection();
+	bool isPositionIllegal();
+	int getSnakeHeadID();
+	void increaseLength();
+
+	sf::RectangleShape createNextBodyElement(int snakeDirection, int snakeCurrentBodyElementID);
 };

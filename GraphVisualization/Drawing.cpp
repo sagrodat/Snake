@@ -22,6 +22,9 @@ void draw()
 		sfmlObjects.getWindow()->draw(game.snake.getSnakeElements()->at(i));
 	}
 
+	//draw fruit
+	sfmlObjects.getWindow()->draw(game.fruits.getFruit());
+
 	//DISPLAY NEW FRAME
 	sfmlObjects.getWindow()->display();
 }

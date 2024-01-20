@@ -20,3 +20,47 @@ bool Game::isOneOfTheseKeysPressed(std::vector<sf::Keyboard::Key>& vec)
 
 sf::Time Game::getFrameInterval() { return frameInterval; }
 void Game::setFrameInterval(sf::Time interval) { frameInterval = interval; }
+
+void Game::endGame()
+{
+	game.setFrameInterval(sf::seconds(INT_MAX)); // pause for INT_MAX seconds
+	std::cout << "Game lost!" << std::endl;
+	/* 
+	* TO DO 
+	* Draw on the screen :
+	* - a reset button
+	* - score number (eaten fruits)
+	* 
+	*/
+}
+
+bool Game::snakeCapturedFruit()
+{
+	if (snake.getSnakeElements()->at(snake.getSnakeHeadID()).getPosition() == fruits.getFruitPos())
+		return true;
+	return false;
+}
+
+void Game::increaseSpeed()
+{
+	frameInterval = sf::seconds(calculateNewFrameDuration());
+}
+float Game::calculateNewFrameDuration()
+{
+	float a = startFrameDuration;
+	float b = 0.05; // the higher the value the faster the speed increases
+	float c = minFrameDuration;
+	return a * exp(-b * score) + c;
+}
+
+void Game::increaseScore() { score += 1; }
+
+bool Game::fruitGeneratedInsideSnake()
+{
+	for (int i = 0; i < snake.getSnakeElements()->size(); i++)
+	{
+		if (snake.getSnakeElements()->at(i).getPosition() == fruits.getFruitPos())
+			return true;
+	}
+	return false;
+}

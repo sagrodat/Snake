@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Drawing.cpp" />
+    <ClCompile Include="Fruits.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SFMLObjects.cpp" />
@@ -145,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="Board.hpp" />
     <ClInclude Include="Drawing.hpp" />
+    <ClInclude Include="Fruits.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="SFMLObjects.hpp" />
     <ClInclude Include="Snake.hpp" />

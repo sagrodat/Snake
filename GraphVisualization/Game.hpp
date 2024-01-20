@@ -3,13 +3,17 @@
 #include "SFMLObjects.hpp"
 #include "Board.hpp"
 #include "Snake.hpp"
+#include "Fruits.hpp"
 
 class Game
 {
 public :
 	Game();
 private : // game variables
-	sf::Time frameInterval = sf::seconds(0.25f);
+	float startFrameDuration = 0.25f;
+	float minFrameDuration = 0.01f;
+	sf::Time frameInterval = sf::seconds(startFrameDuration);
+
 	int score = 0;
 	int bestScore = -1;
 
@@ -53,17 +57,20 @@ public : // initiated in header
 public : // game classes
 	Board board;
 	Snake snake;
+	Fruits fruits;
 
 public :
 	void startGame();
 	void endGame();
-
 	bool hasStarted();
-
 	bool isOneOfTheseKeysPressed(std::vector<sf::Keyboard::Key> & vec);
-
 	sf::Time getFrameInterval();
 	void setFrameInterval(sf::Time interval);
+	bool snakeCapturedFruit();
+	void increaseSpeed();
+	void increaseScore();
+	float calculateNewFrameDuration();
+	bool fruitGeneratedInsideSnake();
 
 
 };

@@ -12,8 +12,8 @@ public :
 	};
 
 private :
-	static const int rows = 40;
-	static const int cols = 40;
+	static const int rows = 20;
+	static const int cols = 20;
 	const int numberOfFields = rows * cols;
 
 	static int fieldWidth;
