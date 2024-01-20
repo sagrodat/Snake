@@ -1,10 +1,8 @@
 #include "GameManager.hpp"
 #include "Drawing.hpp"
 //TO DO 
-// cant turn backwards
 //buttons 
 // difficulty levels ? 
-//color change
 int main()
 {
    
@@ -17,16 +15,20 @@ int main()
                 sfmlObjects.getWindow()->close();
         }
 
-        if (!game->hasStarted() && game->isOneOfTheseKeysPressed(game->startingKeys))
-        {
-            game->startGame();
 
-            // wait one full frame
-            // this is done so the snake starts moving in the way its drawn,
-            // no matter what direction user chooses to start with
-            if (sfmlObjects.getClock()->getElapsedTime() > game->getFrameInterval())
+        if (game->hasStarted() == false)
+        {
+            sf::Keyboard::Key * pressedKey = game->getWhichKeyIsPressed(game->startingKeys);
+            if (pressedKey != NULL)
             {
-                sfmlObjects.getClock()->restart();
+                //only start game if player is trying to move in the 3/4 possible directions 
+                //(not into the snake itself)
+                if (game->getDirectionOfKey(*pressedKey) != game->snake.reversedDirection(game->snake.getDirection()))
+                {
+                    game->startGame();
+                    game->snake.setDirection(game->getDirectionOfKey(*pressedKey));
+                }
+                
             }
         }
 
@@ -34,7 +36,7 @@ int main()
         {
             // MAIN GAME LOGIC
             
-            //get user input ( direction of snake )
+            //keep getting user input ( direction of snake )
             if (game->isOneOfTheseKeysPressed(game->upKeys) && !game->snake.willTurnBackwards(Snake::UP))
                 game->snake.setDirection(Snake::UP);
             else if (game->isOneOfTheseKeysPressed(game->leftKeys) && !game->snake.willTurnBackwards(Snake::LEFT))
@@ -56,7 +58,6 @@ int main()
                     game->endGame();
                 }
                
-
                 // check if snake ate the fruit
                 if (game->snakeCapturedFruit())
                 {
@@ -75,9 +76,7 @@ int main()
                 sfmlObjects.getClock()->restart();
             }
         }
-
         draw();
     }
-
     return 0;
 }

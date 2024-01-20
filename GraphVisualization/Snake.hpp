@@ -9,7 +9,7 @@ class Snake
 public :
 	Snake();
 public :
-	enum Direction {
+	static enum Direction {
 		LEFT = 0,
 		UP = 1,
 		RIGHT = 2,
@@ -52,7 +52,7 @@ public :
 	bool willTurnBackwards(int newDir);
 	void countMove();
 	long long getMoveNumber();
-	int getReversedDirection(int dir);
+	int reversedDirection(int dir);
 
 	sf::RectangleShape createNextBodyElement(int snakeDirection, int snakeCurrentBodyElementID);
 };

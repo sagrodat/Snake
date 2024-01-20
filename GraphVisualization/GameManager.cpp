@@ -19,5 +19,4 @@ void GameManager::updateHighScore()
 	{
 		highScore = currentScore;
 	}
-		
 }

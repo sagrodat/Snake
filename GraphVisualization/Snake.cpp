@@ -21,13 +21,13 @@ Snake::Snake()
 	startDirection = rand() % 4;
 	for (int i = 0; i < startingTotalLength - 1; i++)
 	{
-		sf::RectangleShape bodyElement = createNextBodyElement(getReversedDirection(startDirection), i);
+		sf::RectangleShape bodyElement = createNextBodyElement(reversedDirection(startDirection), i);
 		snakeElements->push_back(bodyElement);
 	}
 	currentDirection = startDirection;
 }
 
-int Snake::getReversedDirection(int dir)
+int Snake::reversedDirection(int dir)
 {
 	int ret;
 	switch (dir)
@@ -107,7 +107,27 @@ void Snake::setHeadPosition(sf::Vector2f vec)
 
 bool Snake::willTurnBackwards(int newDirection)
 {
-	if (newDirection == getReversedDirection(currentDirection))
+	sf::Vector2f newHeadPos = snakeElements->at(SNAKE_HEAD_ID).getPosition();
+	switch (newDirection)
+	{
+	case UP:
+		newHeadPos.y -= Board::getFieldHeight();
+		break;
+	case LEFT:
+		newHeadPos.x -= Board::getFieldWidth();
+		break;
+	case RIGHT:
+		newHeadPos.x += Board::getFieldWidth();
+		break;
+	case DOWN:
+		newHeadPos.y += Board::getFieldHeight();
+		break;
+	default:
+		break;
+	}
+
+	//if head will collide with body element right behind it then its an illegal turn
+	if (newHeadPos == snakeElements->at(SNAKE_HEAD_ID + 1).getPosition())
 		return true;
 	return false;
 }
@@ -127,10 +147,6 @@ void Snake::moveSnake()
 
 	// update head position
 	sf::Vector2f toBeNewHeadPosition = snakeElements->at(SNAKE_HEAD_ID).getPosition();
-	
-	//firstly move head in the direction the snake was drawn in
-	if (getMoveNumber() == 0)
-		currentDirection = startDirection;
 
 	switch (currentDirection)
 	{

@@ -21,8 +21,7 @@ private : // game variables
 
 	bool started = false;
 
-public : // initiated in header
-
+public : // key vectors
 
 	std::vector<sf::Keyboard::Key> startingKeys = {
 		sf::Keyboard::W,
@@ -65,31 +64,21 @@ public : // game classes
 	Snake snake;
 	Fruits fruits;
 
+public : // buttons
 	struct {
 		Button startNewGameButton{ assets.getStartNewGameButton().position, assets.getStartNewGameButton().path };
 	}Buttons;
 
-private : // functional buttons
-	
-	
-
-public : //endGameScreen
-	struct {
-		sf::Color color = sf::Color(0, 0, 255);
-		sf::Vector2f position = sf::Vector2f(200,200);
-		sf::Vector2f size = sf::Vector2f(400, 400);
-	}endGameBackground;
-	
 	
 
 public :
-	void setupButtons();
-
 	int getScore();
 	void startGame();
 	void endGame();
 	bool hasStarted();
 	bool isOneOfTheseKeysPressed(std::vector<sf::Keyboard::Key> & vec);
+	sf::Keyboard::Key* getWhichKeyIsPressed(std::vector <sf::Keyboard::Key> & vec);
+
 	sf::Time getFrameInterval();
 	void setFrameInterval(sf::Time interval);
 	bool snakeCapturedFruit();
@@ -98,8 +87,7 @@ public :
 	float calculateNewFrameDuration();
 	bool fruitGeneratedInsideSnake();
 
-	void resetGame();
-
+	int getDirectionOfKey(sf::Keyboard::Key);
 
 };
 inline Game * game;

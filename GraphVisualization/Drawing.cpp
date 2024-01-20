@@ -32,11 +32,7 @@ void drawEndGameScreen()
     // don't clear, just add what is needed to be drawn on top
 
     // background plane
-    sf::RectangleShape endGameBackground;
-    endGameBackground.setFillColor(game->endGameBackground.color);
-    endGameBackground.setSize(game->endGameBackground.size);
-    endGameBackground.setPosition(game->endGameBackground.position);
-    sfmlObjects.getWindow()->draw(endGameBackground);
+    sfmlObjects.getWindow()->draw(assets.getEndGameBackground());
 
     // display icons (trophy - best score, apple - current score)
     sfmlObjects.getWindow()->draw(assets.getTrophyIcon());
@@ -63,6 +59,4 @@ void drawEndGameScreen()
             }
         }
     }
-
-    std::cout << "got here" << std::endl;
 }

@@ -16,7 +16,7 @@ private :
 		sf::Texture texture;
 		std::string path = "resources\\textures\\trophy.png";
 		sf::Vector2f scale = sf::Vector2f(0.2, 0.2);
-		sf::Vector2f position = sf::Vector2f(450, 300);
+		sf::Vector2f position = sf::Vector2f(450, 310);
 	}trophyIcon;
 
 	struct {
@@ -26,6 +26,13 @@ private :
 		sf::Vector2f scale = sf::Vector2f(0.03, 0.03);
 		sf::Vector2f position = sf::Vector2f(300, 300);
 	}appleIcon;
+
+	struct {
+		sf::Color color = sf::Color(0, 0, 255);
+		sf::Vector2f position = sf::Vector2f(200, 200);
+		sf::Vector2f size = sf::Vector2f(400, 400);
+		sf::RectangleShape rectangle;
+	}endGameBackground;
 
 
 	////////////////////// BUTTONS ////////////////////////
@@ -55,6 +62,8 @@ private :
 		sf::Color color = sf::Color(sf::Color::White);
 		sf::Vector2f position = sf::Vector2f(450, 350);
 	}bestScore;
+
+	////////////////////////////////////////////////////////////
 	
 public :
 	sf::Sprite getTrophyIcon();
@@ -67,10 +76,9 @@ public :
 
 	struct startNewGameButtonInfo getStartNewGameButton() { return startNewGameButtonInfo; }
 	
+	sf::RectangleShape getEndGameBackground();
+
 private :
 	void loadAssets();
-	void adjustAssets();
-
-	
 };
 inline Assets assets;

@@ -24,15 +24,7 @@ void Game::setFrameInterval(sf::Time interval) { frameInterval = interval; }
 
 void Game::endGame()
 {
-	std::cout << "Game lost!" << std::endl;
 	drawEndGameScreen();
-	/* 
-	* TO DO 
-	* Draw on the screen :
-	* - a reset button
-	* - score number (eaten fruits)
-	* 
-	*/
 }
 
 int Game::getScore() { return score; }
@@ -68,4 +60,36 @@ bool Game::fruitGeneratedInsideSnake()
 			return true;
 	}
 	return false;
+}
+
+int Game::getDirectionOfKey(sf::Keyboard::Key key)
+{
+	if (key == sf::Keyboard::W || key == sf::Keyboard::Up) {
+		return Snake::UP;
+	}
+	else if (key == sf::Keyboard::A || key == sf::Keyboard::Left) {
+		return Snake::LEFT;
+	}
+	else if (key == sf::Keyboard::S || key == sf::Keyboard::Down) {
+		return Snake::DOWN;
+	}
+	else if (key == sf::Keyboard::D || key == sf::Keyboard::Right) {
+		return Snake::RIGHT;
+	}
+	return -1;
+}
+
+sf::Keyboard::Key* Game::getWhichKeyIsPressed(std::vector <sf::Keyboard::Key>& vec)
+{
+	sf::Keyboard::Key * ret = NULL;
+
+	for (int i = 0; i < vec.size(); i++)
+	{
+		if (sf::Keyboard::isKeyPressed(vec.at(i)))
+		{
+			ret = &vec.at(i);
+			break;
+		}
+	}
+	return ret;
 }
