@@ -1,5 +1,9 @@
 #include "Game.hpp"
 #include "Drawing.hpp"
+//TO DO 
+//buttons 
+// difficulty levels ? 
+//color change
 int main()
 {
 
@@ -15,6 +19,14 @@ int main()
         if (!game.hasStarted() && game.isOneOfTheseKeysPressed(game.startingKeys))
         {
             game.startGame();
+
+            // wait one full frame
+            // this is done so the snake starts moving in the way its drawn,
+            // no matter what direction user chooses to start with
+            if (sfmlObjects.getClock()->getElapsedTime() > game.getFrameInterval())
+            {
+                sfmlObjects.getClock()->restart();
+            }
         }
 
         if(game.hasStarted())
@@ -31,10 +43,14 @@ int main()
             else if (game.isOneOfTheseKeysPressed(game.downKeys))
                 game.snake.setDirection(Snake::DOWN);
 
-            // move snake 
+            // if time to crate next frame 
             if (sfmlObjects.getClock()->getElapsedTime() > game.getFrameInterval())
             {
                 game.snake.moveSnake();
+
+                // check for end of game
+                if (game.snake.isPositionIllegal())
+                    game.endGame();
 
                 // check if snake ate the fruit
                 if (game.snakeCapturedFruit())
@@ -50,10 +66,6 @@ int main()
                     } while (game.fruitGeneratedInsideSnake());
                 }
                    
-                // check for end of game
-                if (game.snake.isPositionIllegal())
-                    game.endGame();
-
                 //reset clock
                 sfmlObjects.getClock()->restart();
             }

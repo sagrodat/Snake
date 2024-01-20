@@ -22,7 +22,10 @@ private :
 	const int startingTotalLength = 3;
 	const int minDistanceFromEdge = startingTotalLength;
 	int length;
-	int direction = -1;
+	int startDirection = -1;
+	int currentDirection = -1;
+
+	long long moveNumber = 0;
 
 	// used when generating the starting position ( don't want to start on the edge of screen)
 	int headDistanceFromEdge = 10; 
@@ -45,6 +48,10 @@ public :
 	bool isPositionIllegal();
 	int getSnakeHeadID();
 	void increaseLength();
+
+	void countMove();
+	long long getMoveNumber();
+	int getReversedDirection(int dir);
 
 	sf::RectangleShape createNextBodyElement(int snakeDirection, int snakeCurrentBodyElementID);
 };

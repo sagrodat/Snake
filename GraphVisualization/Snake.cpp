@@ -18,12 +18,37 @@ Snake::Snake()
 	generateAndSetHeadStartingPosition();
 
 	//create and add body objects
-	direction = rand() % 4;
+	startDirection = rand() % 4;
 	for (int i = 0; i < startingTotalLength - 1; i++)
 	{
-		sf::RectangleShape bodyElement = createNextBodyElement(direction,i);
+		sf::RectangleShape bodyElement = createNextBodyElement(getReversedDirection(startDirection), i);
 		snakeElements->push_back(bodyElement);
 	}
+	currentDirection = startDirection;
+}
+
+int Snake::getReversedDirection(int dir)
+{
+	int ret;
+	switch (dir)
+	{
+	case UP :
+		ret = DOWN;
+		break;
+	case LEFT :
+		ret = RIGHT;
+		break;
+	case RIGHT :
+		ret = LEFT;
+		break;
+	case DOWN :
+		ret = UP;
+		break;
+	default :
+		ret = -1;
+		break;
+	}
+	return ret;
 }
 
 sf::RectangleShape Snake::createNextBodyElement(int snakeDirection, int snakeCurrentBodyElementID)
@@ -82,8 +107,8 @@ void Snake::setHeadPosition(sf::Vector2f vec)
 
 std::vector<sf::RectangleShape>* Snake::getSnakeElements() { return snakeElements; }
 
-void Snake::setDirection(int direction) { this->direction = direction;}
-int Snake::getDirection() { return direction; }
+void Snake::setDirection(int direction) { this->currentDirection = direction;}
+int Snake::getDirection() { return currentDirection; }
 
 void Snake::moveSnake()
 {
@@ -93,11 +118,14 @@ void Snake::moveSnake()
 		snakeElements->at(i).setPosition( snakeElements->at(i- 1).getPosition() );
 	}
 
-
 	// update head position
 	sf::Vector2f toBeNewHeadPosition = snakeElements->at(SNAKE_HEAD_ID).getPosition();
+	
+	//firstly move head in the direction the snake was drawn in
+	if (getMoveNumber() == 0)
+		currentDirection = startDirection;
 
-	switch (direction)
+	switch (currentDirection)
 	{
 	case UP:
 		toBeNewHeadPosition.y -= Board::getFieldHeight();
@@ -115,15 +143,20 @@ void Snake::moveSnake()
 		break;
 	}
 	snakeElements->at(SNAKE_HEAD_ID).setPosition(toBeNewHeadPosition);
-
+	
+	//just a regular counter
+	countMove();
 }
+
+void Snake::countMove() { moveNumber++; }
+long long Snake::getMoveNumber() { return moveNumber; }
 
 bool Snake::isPositionIllegal()
 {
 	//out of map bounds
-	if (getHeadPosition().x > Board::getNumberOfColumns() * Board::getFieldWidth()
+	if (getHeadPosition().x >= Board::getNumberOfColumns() * Board::getFieldWidth()
 		|| getHeadPosition().x < 0
-		|| getHeadPosition().y > Board::getNumberOfRows() * Board::getFieldHeight() 
+		|| getHeadPosition().y >= Board::getNumberOfRows() * Board::getFieldHeight() 
 		|| getHeadPosition().y < 0)
 		return true;
 
