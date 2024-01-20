@@ -48,9 +48,11 @@ void Game::increaseSpeed()
 float Game::calculateNewFrameDuration()
 {
 	float a = startFrameDuration;
-	float b = 0.05; // the higher the value the faster the speed increases
+	float b = 0.05; // the higher the value the faster the difficulty (speed) increases
 	float c = minFrameDuration;
-	return a * exp(-b * score) + c;
+
+	// exponential function : 0.25 for x = 0 and 0.01 as x->inf
+	return (a-c) * exp(-b * score) + c; 
 }
 
 void Game::increaseScore() { score += 1; }

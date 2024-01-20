@@ -48,7 +48,6 @@ public :
 	bool isPositionIllegal();
 	int getSnakeHeadID();
 	void increaseLength();
-
 	void countMove();
 	long long getMoveNumber();
 	int getReversedDirection(int dir);

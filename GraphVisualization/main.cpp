@@ -1,6 +1,7 @@
 #include "Game.hpp"
 #include "Drawing.hpp"
 //TO DO 
+// cant turn backwards
 //buttons 
 // difficulty levels ? 
 //color change
