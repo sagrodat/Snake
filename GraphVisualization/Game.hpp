@@ -13,8 +13,8 @@ class Game
 public :
 	Game();
 private : // game variables
-	float startFrameDuration = 0.25f;
-	float minFrameDuration = 0.01f;
+	float startFrameDuration = 0.20f;
+	float minFrameDuration = 0.10f;
 	sf::Time frameInterval = sf::seconds(startFrameDuration);
 
 	int score = 0;

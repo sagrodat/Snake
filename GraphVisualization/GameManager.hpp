@@ -1,5 +1,6 @@
 #pragma once
 #include "Game.hpp"
+#include "Assets.hpp"
 class GameManager {
 public :
 	GameManager();

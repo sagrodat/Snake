@@ -1,5 +1,4 @@
 #include "GameManager.hpp"
-
 GameManager::GameManager()
 {
 	createNextGameInstance();
@@ -14,9 +13,10 @@ void GameManager::createNextGameInstance()
 int GameManager::getHighScore() { return highScore; }
 void GameManager::updateHighScore()
 {
-	int currentScore = game->getScore();
-	if (currentScore > highScore)
+	int currentScoreEndGame = game->getScore();
+	if (currentScoreEndGame > highScore)
 	{
-		highScore = currentScore;
+		highScore = currentScoreEndGame;
+		assets.updateHighScoreText(currentScoreEndGame);
 	}
 }

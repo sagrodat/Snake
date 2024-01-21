@@ -1,11 +1,9 @@
 #include "GameManager.hpp"
 #include "Drawing.hpp"
-//TO DO 
-//buttons 
-// difficulty levels ? 
+
+
 int main()
-{
-   
+{ 
     while (sfmlObjects.getWindow()->isOpen())
     {
         sf::Event event;
@@ -64,6 +62,9 @@ int main()
                     game->snake.increaseLength();
                     game->increaseScore();
                     game->increaseSpeed();
+
+                    gameManager.updateHighScore();
+                    assets.updateCurrentScoreTexts(game->getScore());
 
                     //generate fruit until it's in a legal position
                     //cant be generated inside snake ( low chance )

@@ -23,6 +23,10 @@ void draw()
     // draw fruit
     sfmlObjects.getWindow()->draw(game->fruits.getFruit());
 
+    //draw apple score icon and current score
+    sfmlObjects.getWindow()->draw(assets.getAppleIconScore());
+    sfmlObjects.getWindow()->draw(assets.getCurrentScore());
+
     // DISPLAY NEW FRAME
     sfmlObjects.getWindow()->display();
 }
@@ -36,11 +40,10 @@ void drawEndGameScreen()
 
     // display icons (trophy - best score, apple - current score)
     sfmlObjects.getWindow()->draw(assets.getTrophyIcon());
-    sfmlObjects.getWindow()->draw(assets.getAppleIcon());
+    sfmlObjects.getWindow()->draw(assets.getAppleIconEndGame());
 
     // display score as text
-    assets.updateScoreValues(game->getScore(), gameManager.getHighScore());
-    sfmlObjects.getWindow()->draw(assets.getCurrentScore());
+    sfmlObjects.getWindow()->draw(assets.getCurrentScoreEndGame());
     sfmlObjects.getWindow()->draw(assets.getBestScore());
 
     sfmlObjects.getWindow()->draw(game->Buttons.startNewGameButton.getSprite());
@@ -49,6 +52,17 @@ void drawEndGameScreen()
 
     while (true)
     {
+
+        //close if X pressed
+        sf::Event event;
+        sfmlObjects.getWindow()->pollEvent(event);
+        if (event.type == sf::Event::Closed)
+            sfmlObjects.getWindow()->close();
+
+        // OR
+
+    
+        //start new game if button pressed
         if (game->Buttons.startNewGameButton.contains(
             sfmlObjects.getMouse()->getPosition(*sfmlObjects.getWindow())))
         {

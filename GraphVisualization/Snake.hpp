@@ -30,8 +30,8 @@ private :
 	// used when generating the starting position ( don't want to start on the edge of screen)
 	int headDistanceFromEdge = 10; 
 	
-	sf::Color headColor = sf::Color(75,75, 255);
-	sf::Color bodyColor = sf::Color(0, 0, 255);
+	sf::Color headColor = sf::Color(0, 150, 255);
+	sf::Color bodyColor = sf::Color(0, 75, 255);
 
 	// element at index 0 is the head, rest is the body
 	std::vector<sf::RectangleShape>  *snakeElements; 

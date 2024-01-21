@@ -13,66 +13,96 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Resources">
+      <UniqueIdentifier>{fd5ecf5c-6518-48de-b6eb-84ff310494f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Game Objects">
+      <UniqueIdentifier>{c8a085f9-9aa1-40c3-8b4b-ecba7cf673ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Game Managing">
+      <UniqueIdentifier>{39c9f08b-645e-4f27-b8c1-589e41fc3157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Other">
+      <UniqueIdentifier>{575001fc-7faf-404a-9180-a567f7e07357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Resources">
+      <UniqueIdentifier>{35666632-ca6c-413c-92cb-fc087c4438d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Game Objects">
+      <UniqueIdentifier>{fefe2d7a-248f-4ab1-a212-4ae5f0aac0e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Other">
+      <UniqueIdentifier>{e7932d3d-8143-4f54-8fba-7054918005f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Game Managing">
+      <UniqueIdentifier>{3088686b-780f-4ff9-80f4-d5c23dbeacad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Board.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="SFMLObjects.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Drawing.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Fruits.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="Assets.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourcesPath.cpp">
+      <Filter>Pliki źródłowe\Resources</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\Game Managing</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Pliki źródłowe\Game Managing</Filter>
+    </ClCompile>
+    <ClCompile Include="Fruits.cpp">
+      <Filter>Pliki źródłowe\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Pliki źródłowe\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Pliki źródłowe\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawing.cpp">
+      <Filter>Pliki źródłowe\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="SFMLObjects.cpp">
+      <Filter>Pliki źródłowe\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Pliki źródłowe\Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Board.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="SFMLObjects.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Drawing.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Snake.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Fruits.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="ResourcesPath.hpp">
+      <Filter>Pliki nagłówkowe\Resources</Filter>
     </ClInclude>
     <ClInclude Include="Assets.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki nagłówkowe\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Fruits.hpp">
+      <Filter>Pliki nagłówkowe\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.hpp">
+      <Filter>Pliki nagłówkowe\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Snake.hpp">
+      <Filter>Pliki nagłówkowe\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Pliki nagłówkowe\Game Managing</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki nagłówkowe\Game Managing</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawing.hpp">
+      <Filter>Pliki nagłówkowe\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="SFMLObjects.hpp">
+      <Filter>Pliki nagłówkowe\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>Pliki nagłówkowe\Other</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

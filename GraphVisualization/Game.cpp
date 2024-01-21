@@ -2,6 +2,7 @@
 
 Game::Game()
 {
+	assets.updateCurrentScoreTexts(0);
 }
 
 
