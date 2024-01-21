@@ -23,4 +23,5 @@ All apart from the button image which I created myself in Adobe Photoshop were d
 - Game difficulty increases as player gets more points (from 0.25 seconds per frame to 0.10 seconds per frame)
 
 
-
+![Example 1](ExampleScreenshots/Screen1.png)
+![Example 2](ExampleScreenshots/Screen2.png)
