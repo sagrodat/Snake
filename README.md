@@ -13,7 +13,7 @@ In order to launch the game :
 As mentioned above the project was created using C++ (20) with help of the SFML (*Simple and Fast Media*) library. The IDE I used was Microsoft Visual Studio Community Edition.
 ## Assets
 The only assets included are the font, two icons (trophy and apple) and one button image.
-All apart from the button image which I created myself in Adobe Photoshop were downloaded from the web.
+All were downloaded from the web apart from the button image which I created myself in Adobe Photoshop.
 ## Features
 - Game Score is presented in the left upper corner of the game and updated accordingly.
 - After the game is over, the user is presented with a game score and highscore screen.
