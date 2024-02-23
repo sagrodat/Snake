@@ -18,9 +18,9 @@ All were downloaded from the web apart from the button image which I created mys
 - Game Score is presented in the left upper corner of the game and updated accordingly.
 - After the game is over, the user is presented with a game score and highscore screen.
 - The user can start a new game with a press of the button.
-- Moving can be done using WASD or ARROW KEYS
+- Moving is possible by using WASD or ARROW KEYS
 - Pressing any moving button that doesn't point in the snake's body direction **will start the game**
-- Game difficulty increases as player gets more points (from 0.25 seconds per frame to 0.10 seconds per frame)
+- Game difficulty increases as the player gets more points (from 0.25 seconds per frame to 0.10 seconds per frame)
 
 
 ![Example 1](ExampleScreenshots/Screen1.png)
