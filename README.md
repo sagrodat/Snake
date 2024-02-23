@@ -10,7 +10,7 @@ In order to launch the game :
 2. Open the ForDistribution directory
 3. Launch .exe file
 ## Environment
-As mentioned above the project was created using C++ (20) using the SFML (*Simple and Fast Media*) library. The IDE I used was Microsoft Visual Studio Community Edition.
+As mentioned above the project was created using C++ (20) with help of the SFML (*Simple and Fast Media*) library. The IDE I used was Microsoft Visual Studio Community Edition.
 ## Assets
 The only assets included are the font, two icons (trophy and apple) and one button image.
 All apart from the button image which I created myself in Adobe Photoshop were downloaded from the web.
